@@ -72,6 +72,12 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 		anchor.innerHTML = anchor.textContent.replace(/\S/g, '<span class="column">$&</span>');
 	});
 
+	anchors.forEach(anchor => { //***> added for test 
+		anchor.addEventListener('click', (e) => {
+			e.preventDefault(); //***> added for test
+		});
+	});
+
 	window.addEventListener('load', () => {
 		textAppear();
 	});
@@ -150,7 +156,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 	});
 
 
-	
+
 // -------------------------------------------------------------------------------
 
 

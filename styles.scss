@@ -257,6 +257,9 @@
 // -------------------------------------------
 //* Image Slider ---
 
+html {
+  overscroll-behavior-y: none;
+}
 
 $bg: #212121;
 body {
@@ -264,7 +267,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: $bg;
   overflow: hidden;
 }
@@ -302,6 +305,9 @@ body {
     }
     @media (max-width: 754px) {
       padding: 0 8vw;
+    }
+    @media (max-width: 754px) and (max-height: 350px) { //***>
+      height: 45px;; //***> added for test
     }
     @media (max-width: 500px) {
       padding: 0 5vw;
@@ -342,6 +348,9 @@ body {
     @media (max-width: 754px) {
       inset: 60px 15px 150px 15px;
     }
+    @media (max-width: 754px) and (max-height: 350px) { //***>
+      inset: 40px 15px 30px 15px; //***> added for test
+    }
     @media (max-width: 500px) {
       inset: 55px 15px 90px 15px;
     }
@@ -363,6 +372,9 @@ body {
         width: 100px;
         height: 120px;
         border-radius: 10px;
+      }
+      @media (max-width: 754px) and (max-height: 375px) { //*>
+        top: 85%; //*> added for test
       }
       @media (max-width: 400px) {
         transform: translateY(0);
@@ -495,6 +507,9 @@ body {
     @media (max-width: 754px) {
       left: 50px;
       bottom: 55px;
+    }
+    @media (max-width: 754px) and (max-height: 350px) { //***>
+      bottom: 35px; //***> added for test
     }
     @media (max-width: 500px) {
       left: 30px;
