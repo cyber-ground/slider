@@ -44,9 +44,11 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 
 	const slider = document.querySelector('.slider');
 	const btns = document.querySelectorAll('.btn');
+	var slideMotionHowl = new Howl({src: ['mp3/flipCard.mp3'], volume: 0.05});
 
 	btns.forEach(btn => {
 		btn.addEventListener('click', () => {
+			slideMotionHowl.play(); //*
 			const slides = document.querySelectorAll('.slide');
 			if(btn.classList.contains('prev')) {
 				slider.prepend(slides[slides.length -1]);
