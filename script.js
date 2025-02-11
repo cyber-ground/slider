@@ -192,7 +192,6 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 	});
 
 	function adjustPosition() {
-		const mobile = navigator.userAgent.match(/iPhone|Android.+Mobile/);
 		if(!mobile) {
 			if(innerWidth <= 500 && innerHeight > 800) {
 				slider.classList.add('adjust');
