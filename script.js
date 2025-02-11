@@ -50,7 +50,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 		const texts = document.querySelectorAll('.text');
 	const anchors = document.querySelectorAll('.anchor');
 	let touch = false;
-		var slideMotionHowl = new Howl({src: ['mp3/flipCard.mp3'], volume: 0.05});
+		var slideMotionHowl = new Howl({src: ['mp3/flipCard.mp3'], volume: 0.1});
 	
 	function createColumns() {
 		titles.forEach(title => {
