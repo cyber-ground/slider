@@ -90,7 +90,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 //* mobile & pc event ------------------------------------------------
 
 	window.addEventListener('load', () => {
-		// container.addEventListener('touchstart', e => e.preventDefault()); //*
+		container.addEventListener('touchstart', e => e.preventDefault()); //*
 		textAppear();
 	});
 
@@ -137,26 +137,26 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 		});
 	});
 
-	// btns.forEach(btn => {
-	// 	btn.addEventListener('touchstart', (e) => {
-	// 		if(!touch) { touch = true; e.stopPropagation()}
-	// 		btn.style.color = '#555';
-	// 		btn.style.backgroundColor = '#eee';
-	// 	});
-	// 	if(mobile) {
-	// 		btn.addEventListener('mousedown', () => {
-	// 			touch = true;
-	// 			setTimeout(() => { touch = false}, 200);
-	// 		});
-	// 	}
-	// 	btn.addEventListener('touchend', () => {
-	// 		setTimeout(() => {
-	// 			btn.style.color = '#bbb';
-	// 			btn.style.backgroundColor = '#555';
-	// 		}, 100);
-	// 		setTimeout(() => { touch = false}, 200);
-	// 	});
-	// });
+	btns.forEach(btn => {
+		btn.addEventListener('touchstart', (e) => {
+			if(!touch) { touch = true; e.stopPropagation()}
+			btn.style.color = '#555';
+			btn.style.backgroundColor = '#eee';
+		});
+		if(mobile) {
+			btn.addEventListener('mousedown', () => {
+				touch = true;
+				setTimeout(() => { touch = false}, 200);
+			});
+		}
+		btn.addEventListener('touchend', () => {
+			setTimeout(() => {
+				btn.style.color = '#bbb';
+				btn.style.backgroundColor = '#555';
+			}, 100);
+			setTimeout(() => { touch = false}, 200);
+		});
+	});
 
 	//* pc event ---------------------------------------
 
