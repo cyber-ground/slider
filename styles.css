@@ -25,7 +25,7 @@ body {
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -121,6 +121,9 @@ body {
   .container .slider {
     inset: 55px 15px 90px 15px;
   }
+  .container .slider.adjust {
+    inset: 60px 15px 130px 15px;
+  }
 }
 .container .slider .slide {
   position: absolute;
@@ -171,9 +174,6 @@ body {
     border-radius: 20px;
   }
 }
-.container .slider .slide:nth-of-type(2) {
-  scale: 1.01;
-}
 .container .slider .slide:nth-of-type(3) {
   left: calc(50% + 240px);
 }
@@ -189,7 +189,7 @@ body {
 }
 @media (max-width: 400px) {
   .container .slider .slide:nth-of-type(3) {
-    left: calc(0% + 160px);
+    left: calc(0% + 150px);
   }
 }
 .container .slider .slide:nth-of-type(4) {
@@ -207,7 +207,7 @@ body {
 }
 @media (max-width: 400px) {
   .container .slider .slide:nth-of-type(4) {
-    left: calc(0% + 225px);
+    left: calc(0% + 215px);
   }
 }
 .container .slider .slide:nth-of-type(5) {
@@ -225,7 +225,7 @@ body {
 }
 @media (max-width: 400px) {
   .container .slider .slide:nth-of-type(5) {
-    left: calc(0% + 290px);
+    left: calc(0% + 280px);
   }
 }
 .container .slider .slide:nth-of-type(6) {
@@ -285,23 +285,25 @@ body {
     bottom: 10px;
   }
 }
-.container .slider .slide .content h2 {
+.container .slider .slide .content h2.title {
   color: #fff;
   font-size: clamp(2em, 3vw, 3em);
   white-space: nowrap;
   margin-bottom: 5px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-.container .slider .slide .content h2 .column {
   opacity: 0;
 }
-.container .slider .slide .content p {
+.container .slider .slide .content h2.title .column {
+  opacity: 0;
+}
+.container .slider .slide .content p.text {
   color: #fff;
   font-size: clamp(0.8em, 2vw, 1em);
   line-height: 1.3;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
 }
-.container .slider .slide .content p .column {
+.container .slider .slide .content p.text .column {
   opacity: 0;
 }
 .container .buttons {
@@ -325,6 +327,10 @@ body {
   .container .buttons {
     left: 30px;
     bottom: 25px;
+  }
+  .container .buttons.adjust {
+    left: 40px;
+    bottom: 45px;
   }
 }
 .container .buttons .btn {
