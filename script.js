@@ -81,7 +81,11 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 					});
 				} else {
 					const columns = slide.querySelectorAll('.column');
-					columns.forEach(column => { column.style.opacity = 0});
+					columns.forEach(column => { 
+						column.style.opacity = 0;
+						column.style.transitionDuration = 0 + 's';
+						column.style.transitionDelay = 0 + 's';
+					});
 				}
 			});
 		}, 100);
@@ -106,6 +110,7 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 			textAppear();
 		});
 	});
+
 
 	anchors.forEach(anchor => { //***> added for now 
 		anchor.addEventListener('click', (e) => {
@@ -206,7 +211,8 @@ import {console_color,console_red,console_orange,console_yellow,console_green,
 				buttons.classList.remove('adjust');
 			} 
 		}
-	} adjustPosition();
+	} 
+	adjustPosition();
 
 
 
