@@ -8,10 +8,6 @@
   src: local("Orbitron Regular"), local("Orbitron-Regular"), url("font/Orbitron-Regular.ttf") format("truetype");
   font-display: swap;
 }
-html {
-  overscroll-behavior-y: none;
-}
-
 body {
   font-family: "Orbitron-Regular";
   display: flex;
